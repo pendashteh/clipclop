@@ -1,7 +1,8 @@
+
 #!/bin/bash
 
 # ClipClop Clipboard Manager Script
-VERSION="0.0.9"
+VERSION="0.1.0"
 
 # Configurable data directory with default
 DATADIR="${CLIPCLOP_DATADIR:-$HOME/data/clipclop}"
@@ -87,8 +88,11 @@ browse_clipboard() {
                 continue
                 ;;
             2)
-                read -p "Enter filename to save: " output_file
+                # Enable full path expansion and autocomplete
+                read -e -p "Enter filename to save: " output_file
                 if [ -n "$output_file" ]; then
+                    # Expand ~ and resolve full path
+                    output_file=$(eval echo "$output_file")
                     cp "$DATADIR/$selected_file" "$output_file"
                     echo "File saved to $output_file"
                     read -n 1 -s -r -p "Press any key to continue..."

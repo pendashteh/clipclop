@@ -1,22 +1,35 @@
-# ClipClop 🐎
+# ClipClop 📋🐎
 
-A playful clipboard history manager for Ubuntu-based Linux desktops.
+A nimble clipboard history manager for Linux power users.
+
+## Overview
+
+ClipClop is a lightweight, feature-rich clipboard management tool designed for efficiency and simplicity. Built for Ubuntu and Debian-based Linux distributions, it provides an intuitive way to capture, browse, and manipulate your clipboard history.
 
 ## Version
 
-Current Version: 0.0.6
+Current Version: 0.1.0
 
 ## Features
 
-- Automatically save current clipboard content
-- Browse clipboard history with fuzzy search
-- Preview saved clipboard entries
-- Restore entries to clipboard
-- Save entries to a new file
+### Clipboard Capture
+- Automatically saves every clipboard entry
+- Persistent storage of clipboard history
+- Timestamped entries for easy tracking
+
+### Advanced Browsing
+- Fuzzy search through clipboard contents
+- Interactive preview of clipboard entries
+- Quick navigation with keyboard shortcuts
+
+### Flexible Management
+- Copy entries back to clipboard
+- Save entries to custom files
+- Full path expansion and autocomplete support
 
 ## Prerequisites
 
-- Ubuntu or Debian-based Linux distribution
+- Ubuntu or Debian-based Linux
 - `xclip`
 - `fzf` (Fuzzy Finder)
 
@@ -28,82 +41,99 @@ Current Version: 0.0.6
    sudo apt-get install xclip fzf
    ```
 
-2. Clone or download the script:
+2. Download the script:
    ```bash
    wget https://raw.githubusercontent.com/yourusername/clipclop/main/clipclop.sh
-   ```
-
-3. Make the script executable:
-   ```bash
    chmod +x clipclop.sh
    ```
 
 ## Configuration
 
-### Data Directory
+### Custom Data Directory
 
-By default, ClipClop stores clipboard histories in `$HOME/data/clipclop`. 
-You can override this by setting the `CLIPCLOP_DATADIR` environment variable:
-
+Override default clipboard storage:
 ```bash
 export CLIPCLOP_DATADIR="/path/to/your/preferred/directory"
 ```
+Default: `$HOME/data/clipclop`
 
 ## Usage
 
-Run the script:
 ```bash
 ./clipclop.sh
 ```
 
 ### Workflow
-1. Script automatically saves current clipboard
+1. Automatically saves current clipboard
 2. Browse clipboard history
-3. Select an entry to reveal options:
+3. Select entries with powerful options
    - Copy to Clipboard
    - Save to File
-   - Back to List
-   - Exit
+   - Navigate seamlessly
 
-## Advanced Features
+## Advanced Keyboard Interactions
 
-- Fuzzy search through clipboard content
-- Preview entries with scrolling (Ctrl+P/Ctrl+N)
-- Quick copy to clipboard (Ctrl+Y in list view)
+- Arrow keys for navigation
+- Tab for path autocomplete
+- `Ctrl-Y`: Quick copy to clipboard
+- `ESC`: Exit or return to list
 
-## Changelog
+## Suggested Future Enhancements
 
-### v0.0.6
-- Configurable data directory
-- Improved content-based searching
-- Enhanced preview and interaction features
+1. **Intelligent Filtering**
+   - Content type detection
+   - Automatic categorization of clipboard entries
 
-## Suggested Improvements
+2. **Cloud Sync**
+   - Optional synchronization across devices
+   - Encrypted clipboard history backup
 
-1. Limit clipboard entries
-2. Advanced search capabilities
-3. Entry metadata
-4. Custom configuration options
-5. Additional clipboard operations
+3. **Advanced Search**
+   - Regular expression search
+   - Semantic content matching
+
+4. **Rich Media Support**
+   - Image and file path clipboard tracking
+   - Preview capabilities for different content types
+
+5. **Clipboard Templating**
+   - Create reusable text snippets
+   - Macro-like expansions
+
+6. **Integration Plugins**
+   - IDE integration
+   - Productivity tool connectors
+
+7. **Machine Learning**
+   - Predict most likely clipboard restore
+   - Usage-based content ranking
 
 ## Troubleshooting
 
-- Ensure `xclip` and `fzf` are installed
+- Verify `xclip` and `fzf` installation
 - Check script permissions
-- Verify clipboard access permissions
+- Ensure clipboard access
+
+## Community & More
+
+Explore more innovative shell tools at [ChipShell.org](https://chipshell.org)
 
 ## Contributing
 
 1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+2. Create feature branch
+3. Commit changes
+4. Push to branch
+5. Create Pull Request
 
 ## License
 
-[Specify your license here, e.g., MIT, GPL]
+[Specify your license, e.g., MIT, GPL]
 
 ## Author
 
 [Your Name]
+
+---
+
+**Happy Clipping! 📋✨**
